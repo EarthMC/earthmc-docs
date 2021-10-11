@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'EarthMC',
+  tagline: 'A Geopolitical Sandbox',
+  url: 'https://earthmc.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'EarthMC', // Usually your GitHub org/user name.
+  projectName: 'earthmc-docs', // Usually your repo name.
 
   presets: [
     [
@@ -43,9 +43,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'EarthMC',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'EarthMC Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -67,11 +67,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Links',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'EarthMC.net',
+                href: 'https://earthmc.net'
               },
             ],
           },
@@ -79,16 +79,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/TFVYpWQ',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Wiki',
+                href: 'https://earthmc.fandom.com/',
               },
             ],
           },
@@ -101,12 +97,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/EarthMC/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} EarthMC.net.`,
       },
       prism: {
         theme: lightCodeTheme,
