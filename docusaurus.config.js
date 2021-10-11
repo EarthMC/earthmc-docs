@@ -9,7 +9,7 @@ const config = {
   title: 'EarthMC',
   tagline: 'A Geopolitical Sandbox',
   url: 'https://earthmc.net',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
