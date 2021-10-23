@@ -39,13 +39,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Links',
-            items: [
-              {
-                label: 'EarthMC.net',
-                href: 'https://earthmc.net'
-              },
-            ],
+            title: 'IP: play.earthmc.net',
           },
           {
             title: 'Community',
