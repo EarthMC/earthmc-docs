@@ -28,7 +28,7 @@ const config = {
   themeConfig:
     ({
       navbar: {
-        title: 'EarthMC',
+        title: 'EarthMC docs',
         // logo: {
         //   alt: 'EarthMC Logo',
         //   src: 'img/logo.svg',
@@ -42,7 +42,7 @@ const config = {
             title: 'IP: play.earthmc.net',
           },
           {
-            title: 'Community',
+            title: 'Links',
             items: [
               {
                 label: 'Discord',
