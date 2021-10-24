@@ -6,30 +6,14 @@ custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/craf
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import recipeStyles from './styles/recipe.module.css';
 
 export const Recipe = ({ children, ingredients }) => (
-    <div style={{
-        float: "left",
-        marginBottom: "20px",
-        padding: "12px",
-        width: "160px",
-    }}>
-        <h5 style={{
-            fontSize: "14px",
-            fontWeight: 500,
-            marginBottom: "5px",
-        }}>{children}</h5>
-        {ingredients.map((ingredient, _) => {
+    <div className={recipeStyles.recipe_container}>
+        <h5 className={recipeStyles.recipe_header}>{children}</h5>
+        {ingredients.map((ingredient, index) => {
         return (
-            <div style={{
-                backgroundColor: "#8b8b8b",
-                border: "2px solid",
-                borderColor: "#373737 #fff #fff #373737",
-                imageRendering: "pixelated",
-                width: "36px",
-                height: "36px",
-                float: "left",
-            }}>
+            <div key={index} className={recipeStyles.recipe_item}>
                 {ingredient !== "" ?
                     <img
                         src={useBaseUrl("/img/crafting/" + ingredient.split("/")[0].toLowerCase().replace(/ /g, "_") + ".png")}

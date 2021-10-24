@@ -16,7 +16,14 @@ const config = {
   projectName: 'earthmc-docs', // Usually your repo name.
   scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'earthmc.net'}],
 
-  themes: ['@docusaurus/theme-classic'],
+  themes: [
+    ['@docusaurus/theme-classic',
+    {
+      theme: {
+        customCss: [require.resolve('./src/css/custom.css')]
+      }
+    }]
+  ],
   plugins: [
     ['@docusaurus/plugin-content-docs',
     {
