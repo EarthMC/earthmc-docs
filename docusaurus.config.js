@@ -14,7 +14,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'EarthMC', // Usually your GitHub org/user name.
   projectName: 'earthmc-docs', // Usually your repo name.
-  trailingSlash: false,
   scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'earthmc.net'}],
 
   themes: ['@docusaurus/theme-classic'],
