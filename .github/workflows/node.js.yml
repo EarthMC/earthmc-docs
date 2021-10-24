@@ -30,8 +30,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
-    - name: 'Upload Build'
     - uses: actions/upload-artifact@v2
+    - name: 'Upload Build'
       with:
         name: build
         path: build/
