@@ -12,16 +12,45 @@ custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/town
 
 Creating a town costs 64 gold.
 
-Stand in the location where you want the town to be. Run command `/t new`. You now have a town with the size of a chunk.
+Stand in the location where you want the town to be. Run command `/t new`, this will spend those gold ingots and create a single chunk owned by you. You now have a town with the size of 1 chunk.
+
+##Useful commands
+
+You should now type `/t set perm off` to ensure that your town’s default permissions are set so that no residents can interact with anything. Not doing this is a may cause your town to get griefed or items to get stolen by a residents. 
 
 You can spawn directly to your town with `/t spawn`.
 
 Invite residents with `/t invite`.
 
-Towns automatically get deleted after 42 days of inactivity if no single resident has joined the server in that period of time.
-
 :::tip
 
 Avoid giving your residents a pre-made house and too much free gear. Let your residents grow and develop with your town. This improves resident retention.
+
+:::
+
+You can join a nation with your town by using the command `/n join`, you can only join nations whose capital’s homeblock is within 3000 blocks of your town’s homeblock and are either open as seen on `/n nation_name` or you have been invited to using `/t invite accept nation_name`.
+
+## Town ranks
+Give ranks to residents with `/t rank add username rank`
+
+**Councillor** gives the player full access to town plots regardless of ownership, access to most town commands excluding /t unclaim, /t set mayor, /t delete etc. This rank should only be given to the most trusted citizens as it could be detrimental to your town. They can kick everyone except the mayor and other councillors. They can also break everything, steal everything, withdraw all your town gold and toggle all perms on for every other player.
+
+**Trusted** is very similar to the Councillor rank in that they can access any plot regardless of ownership but they cannot use most advanced commands like a councillor could.
+
+**Builder** allows the player to access every plot not owned by a player. They can build, open chests, use items and break blocks anywhere in the town as long as the plot is not owned by a player.
+
+**Settler** allows the player to claim chunks for the town with /t claim.
+
+**Recruiter** allows the player to invite other players with /t add username.
+
+**Police** allows the player to add users to the town outlaw list with /t outlaw add username. This rank is mostly useless as outlawing does nothing currently.
+
+**Tax-exempt** allows the player to not be taxed by the town if taxes are enabled.
+
+**Treasurer** allows the player to use /t withdraw to remove gold from the town bank.
+
+:::caution
+
+Towns automatically get deleted after 42 days of inactivity if no single resident has joined the server in that period of time.
 
 :::
