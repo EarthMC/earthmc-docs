@@ -16,13 +16,18 @@ Creating a town costs 64 gold.
 
 Stand in the location where you want the town to be. Run command `/t new`, this will spend those gold ingots and create a single chunk owned by you. You now have a town with the size of 1 chunk.
 
-## Manage a town
+:::info
 
-You should now type `/t set perm off` to ensure that your town’s default permissions are set so that no residents can interact with anything. Not doing this is a may cause your town to get griefed or items to get stolen by a residents. 
+There is a lot to learn about towns and it could feel overwhelming for new players. Don't worry, learn as you go. Once you have a town you can relax and focus on building and gathering resources, things you already know from vanilla Minecraft. Read on when you feel ready to learn more.
 
+:::
+
+## Town basics
 You can spawn directly to your town with `/t spawn`.
 
 Invite residents with `/t invite`.
+
+You can join a nation with your town by using the command `/n join`, you can only join nations whose capital’s homeblock is within 3000 blocks of your town’s homeblock and are either open as seen on `/n nation_name` or you have been invited to using `/t invite accept nation_name`.
 
 :::tip
 
@@ -30,10 +35,18 @@ Avoid giving your residents a pre-made house and too much free gear. Let your re
 
 :::
 
-You can join a nation with your town by using the command `/n join`, you can only join nations whose capital’s homeblock is within 3000 blocks of your town’s homeblock and are either open as seen on `/n nation_name` or you have been invited to using `/t invite accept nation_name`.
+## Town permissions
+Town permissions manage what residents has access to interact with inside a town. There are 4 permission types:
+* **Build** - Allow residents to place blocks inside the town.
+* **Destory** - Allow residents to destory blocks inside the town.
+* **Switch** - Manages permission to interact with chests,furnaces, levers, hoppers, droppers and blocks with similar nature.
+* **Itemuser** - Manages permission to interact with water, lava, buckets, lighters, bonemeal, enderpearls, bottles and items with similar nature.
+
+A safe default for new mayors is to disable all above permissions with `/t set perm off`. It's also possible to change permissions specifically for allies and outsiders. For example, `/t set perm ally build on` would allow residents of allied nations to build inside the town. It's also possible to edit permissions for individual claims, *plots*. More on that later.
+
 
 ## Town ranks
-Give ranks to residents with `/t rank add username rank`
+Mayors can give ranks to residents with `/t rank add username rank`.
 
 **Councillor** gives the player full access to town plots regardless of ownership, access to most town commands excluding /t unclaim, /t set mayor, /t delete etc. This rank should only be given to the most trusted citizens as it could be detrimental to your town. They can kick everyone except the mayor and other councillors. They can also break everything, steal everything, withdraw all your town gold and toggle all perms on for every other player.
 
@@ -54,7 +67,7 @@ Give ranks to residents with `/t rank add username rank`
 ## Town commands
 
 | Command       | Description          |
-| ------------- |:-------------:|
+| ------------- |:-------------|
 | /t {town}    | View information on specific town. |
 | /t here    | Shows information on town at current location |
 | /t list    | List of all towns |
@@ -67,7 +80,7 @@ Give ranks to residents with `/t rank add username rank`
 | /t withdraw    | Withdraw gold from town bank |
 | /t deposit    | Deposit gold to town bank |
 | /t rank {add|remove} {playername} {rankname}    | Add/remove a town rank |
-| /t set    | Set board/mayor/homeblock for town |
+| /t set    | Set board/mayor/homeblock/perm for town |
 | /t toggle    | Toggle explosion/fire/mobs/pvp for town |
 
 
