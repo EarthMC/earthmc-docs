@@ -1,20 +1,22 @@
 ---
-slug: /how-to-create-a-town
+slug: /town
 title: How to create a town on EarthMC
 description: Creating a town costs 64 gold. Stand in the location where you want the town to be. Run command /t new. You now have a town with the size of a chunk.
 sidebar_position: 6
 sidebar_label: Create a town
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/town.mdx
 ---
-# Create a town
+# Town
 
 ![town](/img/town.png)
+
+## Create a town
 
 Creating a town costs 64 gold.
 
 Stand in the location where you want the town to be. Run command `/t new`, this will spend those gold ingots and create a single chunk owned by you. You now have a town with the size of 1 chunk.
 
-## Useful commands
+## Manage a town
 
 You should now type `/t set perm off` to ensure that your town’s default permissions are set so that no residents can interact with anything. Not doing this is a may cause your town to get griefed or items to get stolen by a residents. 
 
@@ -48,6 +50,26 @@ Give ranks to residents with `/t rank add username rank`
 **Tax-exempt** allows the player to not be taxed by the town if taxes are enabled.
 
 **Treasurer** allows the player to use /t withdraw to remove gold from the town bank.
+
+## Town commands
+
+| Command       | Description          |
+| ------------- |:-------------:|
+| /t {town}    | View information on specific town. |
+| /t here    | Shows information on town at current location |
+| /t list    | List of all towns |
+| /t leave    | Leave town |
+| /t new    | Create a new town |
+| /t add {resident}    | Add resident to town |
+| /t kick    | Kick resident from town |
+| /t spawn    | Teleport to town spawn |
+| [/t claim](https://earthmc.net/docs/how-to-claim-land)    | Claim chunk |
+| /t withdraw    | Withdraw gold from town bank |
+| /t deposit    | Deposit gold to town bank |
+| /t rank {add|remove} {playername} {rankname}    | Add/remove a town rank |
+| /t set    | Set board/mayor/homeblock for town |
+| /t toggle    | Toggle explosion/fire/mobs/pvp for town |
+
 
 :::caution
 
