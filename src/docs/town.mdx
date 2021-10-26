@@ -6,7 +6,7 @@ sidebar_position: 6
 sidebar_label: Create a town
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/town.mdx
 ---
-# Town
+# How to create and manage a town
 
 ![town](/img/town.png)
 
@@ -18,7 +18,7 @@ Stand in the location where you want the town to be. Run command `/t new`, this 
 
 :::info
 
-There is a lot to learn about towns and it could feel overwhelming for new players. Don't worry, learn as you go. Once you have a town you can relax and focus on building and gathering resources, things you already know from vanilla Minecraft. Read on when you feel ready to learn more.
+There is a lot to learn about towns and it could feel overwhelming at first. Don't worry, learn as you go. Once you have a town you can relax and focus on building and gathering resources, things you already know from vanilla Minecraft. Read on when you feel ready to learn more.
 
 :::
 
@@ -27,7 +27,7 @@ You can spawn directly to your town with `/t spawn`.
 
 Invite residents with `/t invite`.
 
-You can join a nation with your town by using the command `/n join`, you can only join nations whose capital’s homeblock is within 3000 blocks of your town’s homeblock and are either open as seen on `/n nation_name` or you have been invited to using `/t invite accept nation_name`.
+Mayors can join add their town to a nation by using the command `/n join`. You can only join nations whose capital’s homeblock is within 3000 blocks of your town’s homeblock. The nation must either be open as seen on `/n nation_name` or your town has to be invited. Accept the invite using `/t invite accept nation_name`.
 
 :::tip
 
@@ -44,9 +44,8 @@ Town permissions manage what residents has access to interact with inside a town
 
 A safe default for new mayors is to disable all above permissions with `/t set perm off`. It's also possible to change permissions specifically for allies and outsiders. For example, `/t set perm ally build on` would allow residents of allied nations to build inside the town. It's also possible to edit permissions for individual claims, *plots*. More on that later.
 
-
 ## Town ranks
-Mayors can give ranks to residents with `/t rank add username rank`.
+Mayors can give ranks to residents with `/t rank add {username} {rank}`.
 
 **Councillor** gives the player full access to town plots regardless of ownership, access to most town commands excluding /t unclaim, /t set mayor, /t delete etc. This rank should only be given to the most trusted citizens as it could be detrimental to your town. They can kick everyone except the mayor and other councillors. They can also break everything, steal everything, withdraw all your town gold and toggle all perms on for every other player.
 
@@ -80,7 +79,7 @@ Mayors can give ranks to residents with `/t rank add username rank`.
 | /t withdraw    | Withdraw gold from town bank |
 | /t deposit    | Deposit gold to town bank |
 | /t rank {add|remove} {playername} {rankname}    | Add/remove a town rank |
-| /t set    | Set board/mayor/homeblock/perm for town |
+| /t set    | Set board/mayor/homeblock (aka spawn)/perm for town |
 | /t toggle    | Toggle explosion/fire/mobs/pvp for town |
 
 
