@@ -1,5 +1,11 @@
+.recipe_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 20px;
+}
+
 .recipe_container {
-	float: left;
 	margin-bottom: 20px;
 	padding: 12px;
 	width: 160px;

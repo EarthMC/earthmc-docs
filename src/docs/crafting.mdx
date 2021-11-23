@@ -1,6 +1,7 @@
 ---
 slug: /crafting-recipes
 title: Custom crafting recipes
+description: EarthMC has a few custom recipes. All are being listed below.
 sidebar_position: 12
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/crafting.mdx
 ---
@@ -8,135 +9,181 @@ custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/craf
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import recipeStyles from './styles/recipe.module.css';
 
-export const Recipe = ({ children, ingredients }) => (
-    <div className={recipeStyles.recipe_container}>
-        <h5 className={recipeStyles.recipe_header}>{children}</h5>
-        {ingredients.map((ingredient, index) => {
-        return (
-            <div key={index} className={recipeStyles.recipe_item}>
-                {ingredient !== "" ?
-                    <img
-                        src={useBaseUrl("/img/crafting/" + ingredient.split("/")[0].toLowerCase().replace(/ /g, "_") + ".png")}
-                        title={ingredient}
-                        />
-                    : null
-                }
-            </div>
-        );
-        })}
-    </div>
-);
+export const Recipes = () => {
+    const recipes = [
+        {
+            title: "Powered Rails",
+            ingredients: [
+                "Iron Ingot", "", "Iron Ingot",
+                "Iron Ingot", "Stick", "Iron Ingot",
+                "Iron Ingot", "Redstone Dust", "Iron Ingot",
+            ]
+        },
+        {
+            title: "Cobweb",
+            ingredients: [
+                "String", "String", "String",
+                "String", "String", "String",
+                "String", "String", "String",
+            ]
+        },
+        {
+            title: "Ink Sac",
+            ingredients: [
+                "", "", "",
+                "", "Coal/Charcoal", "",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Prismarine Shard",
+            ingredients: [
+                "", "", "",
+                "Sand", "Dirt", "Lapis Lazuli",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Prismarine Crystal",
+            ingredients: [
+                "", "", "",
+                "", "Prismarine Shard", "Glowstone Dust",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Coral Blocks",
+            ingredients: [
+                "", "", "",
+                "", "Coral", "Coral",
+                "", "Coral", "Coral",
+            ]
+        },
+        {
+            title: "End Stone",
+            ingredients: [
+                "Sand", "Sand", "Sand",
+                "Sand", "Cobblestone", "Sand",
+                "Sand", "Sand", "Sand",
+            ]
+        },
+        {
+            title: "End Rod",
+            ingredients: [
+                "Glowstone Dust", "White Stained Glass", "Glowstone Dust",
+                "Glowstone Dust", "White Stained Glass", "Glowstone Dust",
+                "Glowstone Dust", "White Stained Glass", "Glowstone Dust",
+            ]
+        },
+        {
+            title: "Lily Pad",
+            ingredients: [
+                "Leaves", "", "Leaves",
+                "Leaves", "Leaves", "Leaves",
+                "Leaves", "Leaves", "Leaves",
+            ]
+        },
+        {
+            title: "Vines",
+            ingredients: [
+                "Leaves", "", "Leaves",
+                "Leaves", "Leaves", "Leaves",
+                "Leaves", "", "Leaves",
+            ]
+        },
+        {
+            title: "Deepslate Ores",
+            ingredients: [
+                "", "", "",
+                "", "Deepslate", "Gold Ore",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Amethyst Shards",
+            ingredients: [
+                "", "", "",
+                "", "End Crystal", "",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Calcite",
+            ingredients: [
+                "", "", "",
+                "", "Diorite", "",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Dripstone",
+            ingredients: [
+                "", "", "",
+                "", "Granite", "",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Pointed Dripstone",
+            ingredients: [
+                "", "", "",
+                "", "Dripstone Block", "Dripstone Block",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Tuff",
+            ingredients: [
+                "", "", "",
+                "", "Stone", "Stone",
+                "", "Andesite", "Andesite",
+            ]
+        },
+        {
+            title: "Deepslate",
+            ingredients: [
+                "", "", "",
+                "", "Cobblestone", "Cobblestone",
+                "", "Cobblestone", "Cobblestone",
+            ]
+        },
+        {
+            title: "Copper Ore",
+            ingredients: [
+                "", "", "",
+                "", "Raw Iron", "Blaze Powder",
+                "", "", "",
+            ]
+        },
+        {
+            title: "Moss",
+            ingredients: [
+                "", "", "",
+                "", "Grass", "Leaves",
+                "", "", "",
+            ]
+        }
+    ]
+    return (
+        <div className={recipeStyles.recipe_wrapper}>
+            {recipes.map((recipe, index) => (
+                <div key={index} className={recipeStyles.recipe_container}>
+                    <h5 className={recipeStyles.recipe_header}>{recipe.title}</h5>
+                    {recipe.ingredients.map((ingredient, index) => (
+                        <div key={index} className={recipeStyles.recipe_item}>
+                            {ingredient !== "" ?
+                                <img
+                                    src={useBaseUrl("/img/crafting/" + ingredient.split("/")[0].toLowerCase().replace(/ /g, "_") + ".png")}
+                                    title={ingredient}
+                                    />
+                                : null
+                            }
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </div>
+    )
+}
 
-<Recipe ingredients={[
-    "Iron Ingot", "", "Iron Ingot",
-    "Iron Ingot", "Stick", "Iron Ingot",
-    "Iron Ingot", "Redstone Dust", "Iron Ingot",
-    ]}>Powered Rails</Recipe>
-
-<Recipe ingredients={[
-    "String", "String", "String",
-    "String", "String", "String",
-    "String", "String", "String",
-    ]}>Cobweb</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Coal/Charcoal", "",
-    "", "", "",
-    ]}>Ink Sac</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "Sand", "Dirt", "Lapis Lazuli",
-    "", "", "",
-    ]}>Prismarine Shard</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Prismarine Shard", "Glowstone Dust",
-    "", "", "",
-    ]}>Prismarine Crystal</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Coral", "Coral",
-    "", "Coral", "Coral",
-    ]}>Coral Blocks</Recipe>
-
-<Recipe ingredients={[
-    "Sand", "Sand", "Sand",
-    "Sand", "Cobblestone", "Sand",
-    "Sand", "Sand", "Sand",
-    ]}>End Stone</Recipe>
-
-<Recipe ingredients={[
-    "Glowstone Dust", "White Stained Glass", "Glowstone Dust",
-    "Glowstone Dust", "White Stained Glass", "Glowstone Dust",
-    "Glowstone Dust", "White Stained Glass", "Glowstone Dust",
-    ]}>End Rod</Recipe>
-
-<Recipe ingredients={[
-    "Leaves", "", "Leaves",
-    "Leaves", "Leaves", "Leaves",
-    "Leaves", "Leaves", "Leaves",
-    ]}>Lily Pad</Recipe>
-
-<Recipe ingredients={[
-    "Leaves", "", "Leaves",
-    "Leaves", "Leaves", "Leaves",
-    "Leaves", "", "Leaves",
-    ]}>Vines</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Deepslate", "Gold Ore",
-    "", "", "",
-    ]}>Deepslate Ores</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "End Crystal", "",
-    "", "", "",
-    ]}>16x Amethyst Shards</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Diorite", "",
-    "", "", "",
-    ]}>Calcite</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Granite", "",
-    "", "", "",
-    ]}>Dripstone</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Dripstone Block", "Dripstone Block",
-    "", "", "",
-    ]}>Pointed Dripstone</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Stone", "Stone",
-    "", "Andesite", "Andesite",
-    ]}>4x Tuff</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Cobblestone", "Cobblestone",
-    "", "Cobblestone", "Cobblestone",
-    ]}>4x Deepslate</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Raw Iron", "Blaze Powder",
-    "", "", "",
-    ]}>Copper Ore</Recipe>
-
-<Recipe ingredients={[
-    "", "", "",
-    "", "Grass", "Leaves",
-    "", "", "",
-    ]}>Moss</Recipe>
+<Recipes />
