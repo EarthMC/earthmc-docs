@@ -15,11 +15,11 @@ pagination_next: claimland
 
 Creating a town costs 64 gold.
 
-Stand in the location where you want the town to be. Run command `/t new`, this will spend those gold ingots and create a single chunk owned by you. You now have a town with the size of 1 chunk. 
+Stand in the location where you want the town to be. Run command `/t new`. This will spend those gold ingots and create a single chunk owned by you. You now have a town with the size of 1 chunk. 
 
 :::info
 
-There is a lot to learn about towns and it could feel overwhelming at first. Don't worry, learn as you go. Once you have a town you can relax and focus on building and gathering resources, things you already know from vanilla Minecraft. Read on when you feel ready to learn more.
+There is a lot to learn about towns, and it could feel overwhelming at first. Don't worry. Learn as you go. Once you have a town, you can relax and focus on building and gathering resources, things you already know from vanilla Minecraft. Read on when you feel ready to learn more.
 
 :::
 
@@ -28,7 +28,7 @@ You can spawn directly to your town with `/t spawn`.
 
 Invite residents with `/t invite`.
 
-Mayors can join add their town to a nation by using the command `/n join`. You can only join nations whose capital’s homeblock is within 3000 blocks of your town’s homeblock. The nation must either be open as seen on `/n nation_name` or your town has to be invited. Accept the invite using `/t invite accept nation_name`.
+Mayors can add their town to a nation by using the command `/n join`. You can only join nations whose capital’s homeblock is within 3000 blocks of your town’s homeblock. The nation must either be open as seen on `/n nation_name`, or your town has to be invited. Accept the invite using `/t invite accept nation_name`.
 
 :::tip
 
@@ -39,20 +39,20 @@ Avoid giving your residents a pre-made house and too much free gear. Let your re
 ## Town permissions
 To protect your town against rogue residents, you may run `/t set perm off` to ensure that your town’s default permissions are set so that no residents can interact with anything. Not doing this may cause your town to be griefed or have its items stolen by residents. 
 
-Town permissions manage what residents has access to interact with inside a town. There are 4 permission types:
+Town permissions manage what residents have access to interact with inside a town. There are 4 permission types:
 * **Build** - Allow residents to place blocks inside the town.
-* **Destory** - Allow residents to destory blocks inside the town.
-* **Switch** - Manages permission to interact with chests,furnaces, levers, hoppers, droppers and blocks with similar nature.
-* **Itemuser** - Manages permission to interact with water, lava, buckets, lighters, bonemeal, enderpearls, bottles and items with similar nature.
+* **Destroy** - Allow residents to destroy blocks inside the town.
+* **Switch** - Manages permission to interact with chests, furnaces, levers, hoppers, droppers, and blocks with similar nature.
+* **Itemuser** - Manages permission to interact with water, lava, buckets, lighters, bonemeal, ender pearls, bottles, and items of similar nature.
 
 A safe default for new mayors is to disable all above permissions with `/t set perm off`. It's also possible to change permissions specifically for allies and outsiders. For example, `/t set perm ally build on` would allow residents of allied nations to build inside the town. It's also possible to edit permissions for individual claims, *plots*. More on that later.
 
 ## Town ranks
 Mayors can give ranks to residents with `/t rank add {username} {rank}`.
 
-**Councillor** gives the player full access to town plots regardless of ownership, access to most town commands excluding `/t unclaim`, `/t set mayor`, `/t delete` etc. This rank should only be given to the most trusted citizens as it could be detrimental to your town. They can kick everyone except the mayor and other councillors. They can also break everything, steal everything, withdraw all your town gold and toggle all perms on for every other player.
+**Councillor** gives the player full access to town plots regardless of ownership, access to most town commands excluding `/t unclaim`, `/t set mayor`, `/t delete`, etc. This rank should only be given to the most trusted citizens as it could be detrimental to your town. They can kick everyone except the mayor and other councillors. They can also break everything, steal everything, withdraw all your town gold and toggle all perms on for every other player.
 
-**Trusted** is very similar to the Councillor rank in that they can access any plot regardless of ownership but they cannot use most advanced commands like a councillor could.
+**Trusted** is very similar to the Councillor rank in that they can access any plot regardless of ownership, but they cannot use the most advanced commands as a councillor could.
 
 **Builder** allows the player to access every plot not owned by a player. They can build, open chests, use items and break blocks anywhere in the town as long as the plot is not owned by a player.
 
