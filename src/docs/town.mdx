@@ -52,19 +52,15 @@ Mayors can give ranks to residents with `/t rank add {username} {rank}`.
 
 **Councillor** gives the player full access to town plots regardless of ownership, access to most town commands excluding `/t unclaim`, `/t set mayor`, `/t delete`, etc. This rank should only be given to the most trusted citizens as it could be detrimental to your town. They can kick everyone except the mayor and other councillors. They can also break everything, steal everything, withdraw all your town gold and toggle all perms on for every other player.
 
-**Trusted** is very similar to the Councillor rank in that they can access any plot regardless of ownership, but they cannot use the most advanced commands as a councillor could.
-
 **Builder** allows the player to access every plot not owned by a player. They can build, open chests, use items and break blocks anywhere in the town as long as the plot is not owned by a player.
 
-**Settler** allows the player to claim chunks for the town with /t claim.
+**Recruiter** allows the player to invite other players with `/t add {username}`.
 
-**Recruiter** allows the player to invite other players with /t add username.
-
-**Police** allows the player to add users to the town outlaw list with /t outlaw add username. This rank is mostly useless as outlawing does nothing currently.
+**Police** allows the player to add users to the town outlaw list with `/t outlaw add {username}`. This rank is mostly useless as outlawing does nothing currently.
 
 **Tax-exempt** allows the player to not be taxed by the town if taxes are enabled.
 
-**Treasurer** allows the player to use /t withdraw to remove gold from the town bank.
+**Treasurer** allows the player to use `/t withdraw` to remove gold from the town bank.
 
 ## Town commands
 
@@ -81,7 +77,8 @@ Mayors can give ranks to residents with `/t rank add {username} {rank}`.
 | [/t claim](https://earthmc.net/docs/how-to-claim-land)    | Claim chunk |
 | /t withdraw    | Withdraw gold from town bank |
 | /t deposit    | Deposit gold to town bank |
-| /t rank {add|remove} {playername} {rankname}    | Add/remove a town rank |
+| /t rank {add/remove} {playername} {rankname} | Add/remove a town rank |
+| /t trust {add/remove} {username} | Give access to all plots regardless of ownership |
 | /t set    | Set board/mayor/homeblock (aka spawn)/perm for town |
 | /t toggle    | Toggle explosion/fire/mobs/pvp for town |
 
