@@ -4,6 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'EarthMC',
   tagline: 'A Geopolitical Sandbox',
@@ -17,13 +18,17 @@ const config = {
   scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'earthmc.net'}],
 
   themes: [
-    ['@docusaurus/theme-classic',
-    {
+    [
+      '@docusaurus/theme-classic',
+      /** @type {import('@docusaurus/theme-classic').Options} */
+    ({
       theme: {
-        customCss: [require.resolve('./src/css/custom.css')]
-      }
-    }]
+        customCss: require.resolve('./src/css/custom.css')
+      },
+    }),
+  ]
   ],
+
   plugins: [
     ['@docusaurus/plugin-content-docs',
     {
