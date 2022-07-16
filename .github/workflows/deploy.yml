@@ -21,4 +21,4 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.PORT }}
           source: "build/"
-          target: "docs"
+          target: "earthmc-docs"
