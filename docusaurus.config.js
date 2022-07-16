@@ -13,33 +13,53 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'EarthMC', // Usually your GitHub org/user name.
   projectName: 'earthmc-docs', // Usually your repo name.
+
   scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'earthmc.net'}],
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
 
   themes: [
     [
       '@docusaurus/theme-classic',
       /** @type {import('@docusaurus/theme-classic').Options} */
-    ({
-      theme: {
+      {
         customCss: require.resolve('./src/css/custom.css')
       },
-    }),
-  ]
+    ]
   ],
 
   plugins: [
-    ['@docusaurus/plugin-content-docs',
-    {
-      path: 'src/docs',
-      routeBasePath: '/'
-    }],
-    ['@docusaurus/plugin-sitemap',
-    {
-      changefreq: 'weekly',
-      priority: 0.5,
-    }
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'src/docs',
+        routeBasePath: '/'
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        path: 'src/pages',
+        routeBasePath: '/pages'
+      }
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+      }
     ]
   ],
 
