@@ -36,15 +36,13 @@ Avoid giving your residents a pre-made house and too much free gear. Let your re
 :::
 
 ## Town permissions
-To protect your town against rogue residents, you may run `/t set perm off` to ensure that your town’s default permissions are set so that no residents can interact with anything. Not doing this may cause your town to be griefed or have its items stolen by residents. 
-
 Town permissions manage what residents have access to interact with inside a town. There are 4 permission types:
 * **Build** - Allow residents to place blocks inside the town.
 * **Destroy** - Allow residents to destroy blocks inside the town.
 * **Switch** - Manages permission to interact with chests, furnaces, levers, hoppers, droppers, and blocks with similar nature.
-* **Itemuser** - Manages permission to interact with water, lava, buckets, lighters, bonemeal, ender pearls, bottles, and items of similar nature.
+* **Item** - Manages permission to interact with water, lava, buckets, lighters, bonemeal, ender pearls, bottles, and items of similar nature.
 
-A safe default for new mayors is to disable all above permissions with `/t set perm off`. It's also possible to change permissions specifically for allies and outsiders. For example, `/t set perm ally build on` would allow residents of allied nations to build inside the town. It's also possible to edit permissions for individual claims, *plots*. More on that later.
+All town permissions are disabled by default, as a mayor you can grant permissions by giving ranks with `/t rank add username rank` or by selling individual plots to residents with `/plot fs price`. It's also possible to change permissions specifically for allies and outsiders. For example, `/t set perm ally build on` would allow residents of allied nations to build inside the town. It's also possible to edit permissions for individual claims, *plots*. More on that later.
 
 ## Plots
 Town land is divided into 16x16 block sized plots. Conveniently, this perfectly lines up with Minecraft chunks. Use the debug screen to view chunk borders which then also show plot borders. Toggle the chunk debug screen with `F3+G`.
