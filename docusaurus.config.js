@@ -54,6 +54,13 @@ const config = {
         routeBasePath: '/pages'
       }
     ],
+     [
+      '@docusaurus/plugin-content-blog',
+      {
+        path: 'src/blog',
+        routeBasePath: '/blog'
+      }
+    ],
     [
       '@docusaurus/plugin-sitemap',
       {
