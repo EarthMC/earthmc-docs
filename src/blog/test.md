@@ -4,7 +4,7 @@ description: This is the first blog post
 slug: welcome-docusaurus-v2
 authors:
   - name: Fix
-    title: Ower
+    title: Owner
 tags: [hello, docusaurus-v2]
 hide_table_of_contents: false
 ---
