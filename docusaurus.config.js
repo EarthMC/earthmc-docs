@@ -57,8 +57,8 @@ const config = {
      [
       '@docusaurus/plugin-content-blog',
       {
-        path: 'src/blog',
-        routeBasePath: '/blog'
+        path: 'src/posts',
+        routeBasePath: '/posts'
       }
     ],
     [
