@@ -11,14 +11,27 @@ id: claimland
 
 ![claim](/img/f3g.png)
 
-Land is divided into claims. One claim is exactly 16x16 blocks and perfectly lines up with Minecraft chunks. Press F3+G view chunk (claim) borders. 
+Land is divided into claims. One claim is exactly 16x16 blocks and perfectly lines up with Minecraft chunks. 
 
-Claiming a chunk costs 16 gold. To claim a chunk;
+**Claiming a chunk costs 16 gold.** To claim a chunk:
 
-1. Deposit 16 or more gold to your town bank. All town expenses are paid through the town bank. `/t deposit 16`. 
-2. Stand in a chunk you want to claim adjacent to a chunk the town already owns.
-3. Run command `/t claim`.
+1. Join or create a [town](https://earthmc.net/docs/town).
+2. Have a town rank which is able to claim land, such as mayor (default rank for town creator). More on town ranks [here](https://earthmc.net/docs/town#town-ranks).  
+3. Deposit 16 or more gold to your town bank. All town expenses are paid through the town bank. `/t deposit 16`. 
+4. Stand in a chunk you want to claim adjacent to a chunk the town already owns.
+5. Run command `/t claim`.
 
 You successfully claim the chunk!
 
+:::tip
+
+Press F3+G keys to view chunk (claim) borders in-game.
+
+:::
+
+## Claim limits
 Your town can at first only claim 8 chunks. You can increase this number by 8 for every resident who joins. Your maximum amount of chunks can also increase through a nation bonus. This is an amount of max claimable chunks added to every town in a nation. It ranges from 10 extra chunks all the way to 140. It scales based on total residents in a nation. 10 chunks are from simply being in a nation. 140 is from having 50 residents in your whole nation.
+
+You can see how many chunks a town can claim by running `/t {townname}`. This command will show general town information. Look for "Town Size", this shows a ratio between chunks a town already has claimed and the max amount of claims the town can claim to. For example, "Town size: 90/152" means that the given town has claimed 90 out of 152 chunks.
+
+Sometimes you will notice that a town has *more* chunks claimed that it's able to claim, for example "Town size: 90/60". This can happen if residents leave after the town has been claimed. As mention above, towns can claim 8 chunks per town resident. Towns do no lose their claims even if they no longer have enough residents. 
