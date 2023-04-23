@@ -81,10 +81,6 @@ This was added some time ago but hasn't been properly announced. You can now tog
 
 Classic was the first iteration of EarthMC. It was online from 2016 until 2018. You can now visit Classic in spectator mode with the command /joinqueue classic. It's important to preserve server history. Classic dynmap will be available in the near future.
 
----
-
-## Teleport to any town in your own nation
-It is now possible to spawn to any town in your own nation.
 
 
 
