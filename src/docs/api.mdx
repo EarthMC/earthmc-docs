@@ -14,7 +14,7 @@ The API can be accessed through the URL `api.earthmc.net`, it provides data in J
 This endpoint is the most simplistic providing info such as the number of online players, the player cap, and the current weather and time.
 
 ### Residents endpoint
-Accessing `api.earthmc.net/v1/aurora/residents/` will provide a key containing the number of residents and a list of all residents currently registered, to get more specific data on a resident you can append their username or UUID to the end of the residents URL, for example `api.earthmc.net/v1/aurora/residents/Fruitloopins` will return info about the resident Fruitloopins including their town and nation affiliation, gold balance, title and surname, and their town and nation ranks.
+Accessing `api.earthmc.net/v1/aurora/residents/{username}` will provide specific data on a resident, for example `api.earthmc.net/v1/aurora/residents/Fruitloopins` will return info about the resident Fruitloopins including their town and nation affiliation, gold balance, title and surname, and their town and nation ranks. You can use their username or UUID to access this info.
 
 ### Towns endpoint
 Accessed at `api.earthmc.net/v1/aurora/towns/` this similarly to the residents endpoint provides a key showing the number of towns along with a list of all towns, a town name can be appended to the end of the URL to query specific info about that town such as all the residents in it, when it was founded, all the players with ranks in it and much more.
