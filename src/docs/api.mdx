@@ -14,13 +14,13 @@ The API can be accessed through the URL `api.earthmc.net`, it provides data in J
 This endpoint is the most simplistic providing info such as the number of online players, the player cap, and the current weather and time.
 
 ### Residents endpoint
-Accessing `api.earthmc.net/v1/aurora/residents/` will provide a key containing the number of residents and a list of all residents currently registered, to get more specific data on a resident you can append their username or UUID to the end of the residents URL, for example `api.earthmc.net/v1/aurora/residents/Fruitloopins` will return info about the resident Fruitloopins including their town and nation affiliation, gold balance, title and surname, and their town and nation ranks.
+To get more specific data on a resident you can append their username or UUID to the end of the residents URL, for example `api.earthmc.net/v1/aurora/residents/Fruitloopins` will return info about the resident Fruitloopins including their town and nation affiliation, gold balance, title and surname, and their town and nation ranks.
 
 ### Towns endpoint
-Accessed at `api.earthmc.net/v1/aurora/towns/` this similarly to the residents endpoint provides a key showing the number of towns along with a list of all towns, a town name can be appended to the end of the URL to query specific info about that town such as all the residents in it, when it was founded, all the players with ranks in it and much more.
+Accessed at `api.earthmc.net/v1/aurora/towns/`, this endpoint provides a key showing the number of towns along with a list of all towns. A town name can be appended to the end of the URL to query specific info about that town such as all the residents in it, when it was founded, all the players with ranks in it and much more.
 
 ### Nations endpoint
-Nation data can be accessed through the URL `api.earthmc.net/v1/aurora/nations/`, just like the others it will show the quantity of nations and a list of all nations, you can access data about a specific nation by appending the nation name to the end of the URL i.e. `/nations/Cascadia`, this will return info such as the nation's board message, it's residents, when it was founded, and it's n spawn's coordinates.
+Nation data can be accessed through the URL `api.earthmc.net/v1/aurora/nations/`, just like with towns it will show the quantity of nations and a list of all nations, you can access data about a specific nation by appending the nation name to the end of the URL i.e. `/nations/Cascadia`, this will return info such as the nation's board message, it's residents, when it was founded, and it's n spawn's coordinates.
 
 ## Usage example
 
