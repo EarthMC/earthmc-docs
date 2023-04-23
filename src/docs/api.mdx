@@ -10,7 +10,6 @@ custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/api.
 The API can be accessed through the URL `api.earthmc.net`, it provides data in JSON format and consists of 3 main endpoints that provide Towny data, `/v1/residents/`, `/v1/towns/`, and `/v1/nations/` with an additional endpoint for server info at just `/v1/`.
 
 ## Endpoint details
-#
 ### Server info endpoint
 This endpoint is the most simplistic providing info such as the number of online players, the player cap, and the current weather and time.
 
@@ -24,7 +23,6 @@ Accessed at `api.earthmc.net/v1/towns/` this similarly to the residents endpoint
 Nation data can be accessed through the URL `api.earthmc.net/v1/nations/`, just like the others it will show the quantity of nations and a list of all nations, you can access data about a specific nation by appending the nation name to the end of the URL i.e. `/nations/Cascadia`, this will return info such as the nation's board message, it's residents, when it was founded, and it's n spawn's coordinates.
 
 ## Usage examples
-#
 Cycle through all residents and print their balance
 ```py
 url = "https://api.earthmc.net/v1/residents/"
