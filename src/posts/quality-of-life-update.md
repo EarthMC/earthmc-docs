@@ -47,7 +47,7 @@ It is now possible to spawn to any town in your own nation. The technology is fi
 ---
 
 ## Mystery crates 2.0
-![New mystery crate][/img/mc2.png]
+![New mystery crate](/img/mc2.png)
 
 ![town](/img/town.png)
 Mystery crates contain random cosmetic player heads. They are used for decoration, hats and collections but provide no gameplay advantage. These collectibles have been available through Mystery crates for a few years now. The old crate system was showing its age so it has been reworked from scratch. 
@@ -71,6 +71,7 @@ New gold crates will be introduced later next week. Gold crates are awarded to p
 
 ## Map ISO render
 ![iso dynmap earthmc](/img/isorender.png)
+
 This was added some time ago but hasn't been properly announced. You can now toggle from 2D render to ISO render in the right hand side menu. Direct link here: https://earthmc.net/map/aurora/?worldname=earth&mapname=surface
 
 ---
