@@ -4,6 +4,8 @@ title: Quality of life update
 hide_table_of_contents: true
 ---
 
+The update is live! Hope you like it. Here's what's new!
+
 ## Official API
 EarthMC now has an official API in courtesy of Fruitloopins!
 
@@ -42,14 +44,13 @@ print(unalliedList)
 ---
 
 ## Teleport to any town in your own nation
-It is now possible to spawn to any town in your own nation. The technology is finally here.
+It is now possible to spawn to any town in your own nation. The technology is finally here. `/t spawn`.
 
 ---
 
 ## Mystery crates 2.0
 ![New mystery crate](/img/mc2.png)
 
-![town](/img/town.png)
 Mystery crates contain random cosmetic player heads. They are used for decoration, hats and collections but provide no gameplay advantage. These collectibles have been available through Mystery crates for a few years now. The old crate system was showing its age so it has been reworked from scratch. 
 
 * Animations now run faster and smoother regardless of current TPS.
@@ -62,7 +63,7 @@ Mystery crates contain random cosmetic player heads. They are used for decoratio
 	* "Quality" indicates the condition the collectible is in, similar to wear for those familiar with CSGO skins.
 * Text gradient support.
 
-For a limited time, everyone can get 1 free Mystery crate from the store available here:
+**For a limited time, everyone can get 1 free Mystery crate from the store available here: [https://store.earthmc.net/category/mystery-crates](https://store.earthmc.net/category/mystery-crates)**. Give your feedback!
 
 ## New gold crates
 New gold crates will be introduced later next week. Gold crates are awarded to players that vote for the server. Many of the benefits described above also carries over to the new gold crates. The animations are smoother and look better. The new gold crates also gives out slightly more gold on average. Minimum amount of gold per crate is now 2. 
