@@ -4,9 +4,7 @@ title: Quality of Life update
 hide_table_of_contents: true
 ---
 
-The update is live! Hope you like it. Here's what's new!
-
-Special thanks to Warrior and Fruitloopins.
+Hello everyone, Fix here. It's time for an update! Here's what's new:
 
 ## Official API
 EarthMC now has an official API in courtesy of Fruitloopins!
@@ -81,8 +79,13 @@ This was added some time ago but hasn't been properly announced. You can now tog
 
 ## Preserving history - Classic in spectator mode
 
-Classic was the first iteration of EarthMC. It was online from 2016 until 2018. You can now visit Classic in spectator mode with the command /joinqueue classic. It's important to preserve server history. Classic dynmap will be available in the near future.
+Classic was the first iteration of EarthMC. It was online from 2016 until 2018. You can now visit Classic in spectator mode with the command /joinqueue classic. I think it's important to preserve server history. Classic dynmap will be available in the near future.
 
+---
+
+Special thanks to Warrior and Fruitloopins for making the update possible. 
+
+See you online!
 
 
 
