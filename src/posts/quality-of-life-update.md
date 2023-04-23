@@ -1,10 +1,12 @@
 ---
 slug: /quality-of-life-update
-title: Quality of life update
+title: Quality of Life update
 hide_table_of_contents: true
 ---
 
 The update is live! Hope you like it. Here's what's new!
+
+Special thanks to Warrior and Fruitloopins.
 
 ## Official API
 EarthMC now has an official API in courtesy of Fruitloopins!
