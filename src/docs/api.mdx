@@ -7,25 +7,25 @@ sidebar_label: API
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/api.mdx
 ---
 ## Accessing the API
-The API can be accessed through the URL `api.earthmc.net`, it provides data in JSON format and consists of 3 main endpoints that provide Towny data, `/v1/residents/`, `/v1/towns/`, and `/v1/nations/` with an additional endpoint for server info at just `/v1/`.
+The API can be accessed through the URL `api.earthmc.net`, it provides data in JSON format and consists of 3 main endpoints that provide Towny data, `/v1/aurora/residents/`, `/v1/aurora/towns/`, and `/v1/aurora/nations/` with an additional endpoint for server info at just `/v1/aurora/`.
 
 ## Endpoint details
 ### Server info endpoint
 This endpoint is the most simplistic providing info such as the number of online players, the player cap, and the current weather and time.
 
 ### Residents endpoint
-Accessing `api.earthmc.net/v1/residents/` will provide a key containing the number of residents and a list of all residents currently registered, to get more specific data on a resident you can append their username or UUID to the end of the residents URL, for example `api.earthmc.net/v1/residents/Fruitloopins` will return info about the resident Fruitloopins including their town and nation affiliation, gold balance, title and surname, and their town and nation ranks.
+Accessing `api.earthmc.net/v1/aurora/residents/` will provide a key containing the number of residents and a list of all residents currently registered, to get more specific data on a resident you can append their username or UUID to the end of the residents URL, for example `api.earthmc.net/v1/aurora/residents/Fruitloopins` will return info about the resident Fruitloopins including their town and nation affiliation, gold balance, title and surname, and their town and nation ranks.
 
 ### Towns endpoint
-Accessed at `api.earthmc.net/v1/towns/` this similarly to the residents endpoint provides a key showing the number of towns along with a list of all towns, a town name can be appended to the end of the URL to query specific info about that town such as all the residents in it, when it was founded, all the players with ranks in it and much more.
+Accessed at `api.earthmc.net/v1/aurora/towns/` this similarly to the residents endpoint provides a key showing the number of towns along with a list of all towns, a town name can be appended to the end of the URL to query specific info about that town such as all the residents in it, when it was founded, all the players with ranks in it and much more.
 
 ### Nations endpoint
-Nation data can be accessed through the URL `api.earthmc.net/v1/nations/`, just like the others it will show the quantity of nations and a list of all nations, you can access data about a specific nation by appending the nation name to the end of the URL i.e. `/nations/Cascadia`, this will return info such as the nation's board message, it's residents, when it was founded, and it's n spawn's coordinates.
+Nation data can be accessed through the URL `api.earthmc.net/v1/aurora/nations/`, just like the others it will show the quantity of nations and a list of all nations, you can access data about a specific nation by appending the nation name to the end of the URL i.e. `/nations/Cascadia`, this will return info such as the nation's board message, it's residents, when it was founded, and it's n spawn's coordinates.
 
 ## Usage examples
 Cycle through all residents and print their balance
 ```py
-url = "https://api.earthmc.net/v1/residents/"
+url = "https://api.earthmc.net/v1/aurora/residents/"
 
 allResidentsLookup = requests.get(url).json()
 allResidents = allResidentsLookup["allResidents"]
@@ -38,8 +38,8 @@ Print a list of all nations that a nation still needs to ally
 ```py
 nation = "Australia"
 
-allNationsLookup = requests.get("https://api.earthmc.net/v1/nations/").json()
-nationsLookup = requests.get(f"https://api.earthmc.net/v1/nations/{nation}").json()
+allNationsLookup = requests.get("https://api.earthmc.net/v1/aurora/nations/").json()
+nationsLookup = requests.get(f"https://api.earthmc.net/v1/aurora/nations/{nation}").json()
 
 allyList = nationsLookup["allies"]
 allNations = allNationsLookup["allNations"]
