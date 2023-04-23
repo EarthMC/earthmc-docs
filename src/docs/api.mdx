@@ -29,7 +29,7 @@ Print a list of all nations that a nation still needs to ally
 nation = "Australia"
 
 allNationsLookup = requests.get("https://api.earthmc.net/v1/aurora/nations/").json()
-nationsLookup = requests.get(f"https://api.earthmc.net/v1/aurora/nations/{nation}").json()
+nationsLookup = requests.get("https://api.earthmc.net/v1/aurora/nations/{nation}").json()
 
 allyList = nationsLookup["allies"]
 allNations = allNationsLookup["allNations"]
