@@ -63,7 +63,7 @@ Mystery crates contain random cosmetic player heads. They are used for decoratio
 	* "Quality" indicates the condition the collectible is in, similar to wear for those familiar with CSGO skins.
 * Text gradient support.
 
-**The new Mystery crates are available here: [https://store.earthmc.net/category/mystery-crates]**
+**The new Mystery crates are available here: https://store.earthmc.net/category/mystery-crates**
 
 ## New gold crates
 New gold crates will be introduced later next week. Gold crates are awarded to players that vote for the server. Many of the benefits described above also carries over to the new gold crates. The animations are smoother and look better. The new gold crates also gives out slightly more gold on average. Minimum amount of gold per crate is now 2. 
