@@ -7,15 +7,33 @@ sidebar_label: mcMMO
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/mcmmo.mdx
 ---
 # mcMMO
-mcMMO allows players to level up skills such as mining, woodcutting, and fishing to get special abilities that help to make these tasks easier. The system is very similar to leveling in the game RuneScape. 
+mcMMO allows players to level up skills such as mining, woodcutting, and fishing to get special abilities that help to make these tasks easier. The system is very similar to leveling in the game RuneScape.
 
-McMMO features a global leaderboard wherein all players’ levels can be compared. This can be viewed with `/mctop`. To see a specific skill’s top players type `/mctop skillname`. `/mcrank` is used to see your ranking in each skill. You can type `/skillname` i.e. `/mining`, `/woodcutting`, etc., to see your level and unlocked abilities in a particular skill. You can view another player’s mcMMO levels with `/mcmmo:inspect player`.
+## Skills and abilities
+You can learn details on every skill and ability by using `/skillname ? pagenumber`. You can type `/skillname` i.e. `/mining`, `/woodcutting`, etc., to see your level and unlocked abilities in a particular skill.
 
 To use a skill’s special ability, you must first unlock it by leveling up the skill and then right-click with the tool used for said skill to ready it, hit the block the tool is meant to break to activate it. An example of this is pressing right-click with a pickaxe and then breaking stone to activate your super breaker ability. Keep in mind that if you have an item in your offhand, you must crouch and right-click to ready your tool.
 
 Some skills only have passive abilities. For example, leveling fishing reduces your time spent waiting for a catch, increases the rarity of items caught, and makes eating fish more effective. Leveling your alchemy skill will allow you to create more types of potions such as haste, absorption, and decay and will decrease the time it takes for you to make potions.
 
-McMMO also allows [Premium](https://earthmc.net/premium/) players to create parties. These parties turn off the friendly fire for those in the same party, create a private chat accessible with `/pc` and allow the sharing of mcMMO experience. To create a party type `/party create name`, to invite players to your party type `/party invite player`. All players, regardless of rank, can join parties.
+### Skill summary
+| Skill       | Gaining experience                             |
+| ----------- |:-----------------------------------------------|
+| Mining      | Mining stone/ores                              |
+| Woodcutting | Breaking logs and wood                         |
+| Herbalism   | Harvesting crops and plants                    |
+| Excavation  | Excavating dirt, sand, gravel and its variants |
+| Fishing     | Fishing                                        |
+| Unarmed     | Fighting with no tool                          |
+| Archery     | Dealing damage with bows and crossbows         |
+| Swords      | Combatting with swords                         |
+| Axes        | Attacking with axes                            |
+| Taming      | Taming tameable animals                        |
+| Repair      | Right-clicking an iron block with damaged item |
+| Acrobatics  | Taking fall damage                             |
+| Alchemy     | Brewing potions                                |
+| Salvage     | Mastering Fishing and Repair                   |
+| Smelting    | Mastering Mining and Repair                    |
 
 :::info
 
@@ -34,4 +52,32 @@ Disabled abilities are:
 
 :::
 
+## Parties
+McMMO also allows [Premium](https://earthmc.net/premium/) players to create parties. These parties turn off the friendly fire for those in the same party, create a private chat accessible with `/pc` and allow the sharing of mcMMO experience. To create a party type `/party create name`, to invite players to your party type `/party invite player`. All players, regardless of rank, can join parties.
 
+## Leaderboard
+McMMO features a global leaderboard wherein all players’ levels can be compared. This can be viewed with `/mctop`. To see a specific skill’s top players type `/mctop skillname`. `/mcrank` is used to see your ranking in each skill. You can view another player’s mcMMO levels with `/inspect player`.
+
+## mcMMO commands summary
+| Command       | Description                          |
+| ----------- |:-----------------------------------------------|
+| /skillname      | Mining stone/ores                              |
+| /mctop     | Fishing                                        |
+| /mctop skillname     | Fighting with no tool                          |
+| /mcrank     | Dealing damage with bows and crossbows         |
+| /inspect player      | Combatting with swords                         |
+
+## Party commands summary
+| Command                         | Description                               |
+| ------------------------------- |:------------------------------------------|
+| /party or /party info           | Information about your party              |
+| /party create name              | Creates a party (Premium)                 |
+| /party disband                  | Disbands a party (Leader)                 |
+| /party invite player            | Invites to a party                        |
+| /partychat or /pc               | Toggles whether you talk in a party chat  |
+| /party join leadername password | Joins a party. Password is optional.      |
+| /party quit                     | Quits a party if not a leader.            |
+| /party lock/unlock              | Sets party's invite-only status. (Leader) |
+| /party password (password)      | Sets party's password. (Leader)           |
+| /party kick player              | Kick player from a party. (Leader)        |
+| /party leader player            | Sets leader of a party. (Leader)          |
