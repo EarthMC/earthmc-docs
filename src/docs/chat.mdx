@@ -7,13 +7,51 @@ sidebar_label: Chat
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/chat.mdx
 ---
 ## Channels
-The chat is divided into channels, and you decide which ones to display. All channels you have permission to view are active by default. Check which channels you are currently in with the command `/ch list`. Leave the channels you do not wish to participate in with `/ch leave`. To write in a specific channel, for example town chat, run `/ch join town`. The default write channel is global. Stick to English when writing in global chat so everyone can understand.
+The chat is divided into channels, and you decide which ones to display. All channels you have permission to view are active by default. Check which channels you are currently in with the command `/ch list`. Leave the channels you do not wish to participate in with `/ch leave <channel>`. To write in a specific channel, for example town chat, run `/ch join town`. The default write channel is `global`. Stick to English when writing in global chat so everyone can understand.
+
+### List of channels
+| Channel            | Description                                                 |
+| ------------------ |:------------------------------------------------------------|
+| /global            | General chat, where everyone talks English                  |
+| /local             | Only players in specified promixity can hear you            |
+| /trade             | Trading stuff, e.g. selling or buying announcements         |
+| /ch join premium   | Special chat, exclusive for Premium players                 |
+| /nc or /nationchat | Channel for nation members                                  |
+| /tc or /townchat   | Channel for town members                                    |
+| /[language]        | A collection of channels for talking in specific languages  |
+
+### non-English language channels
+* Chinese
+* Dutch
+* French
+* German
+* Japanese
+* Polish
+* Portuguese
+* Russian
+* Spanish
+* Swedish
+* Turkish
+* Ukrainian
 
 ## Private messaging
-Send a private message with `/msg`. Quickly reply to last private message with `/r`. Send mail to offline players with `/mail send`.
+Send a private message with `/msg <player> <message>`. Quickly reply to last private message with `/r <message>`. Send mail to offline players with `/mail send <player> <message>`. You can read mails via `/mail read`.
 
 ## Ignoring players
-Sometimes a single player ruins chat. Instead of leaving the channel, you can ignore the individual player with `/ignore`. All messages from the ignored player will be hidden until you `/unignore`.
+Sometimes a single player ruins chat. Instead of leaving the channel, you can ignore the individual player with `/ignore <player>`. All messages from the ignored player will be hidden until you `/unignore <player>`.
+
+### Commands summary
+| Command                       | Description                                |
+| ----------------------------- |:-------------------------------------------|
+| /ch join [channel]            | Join the specified channel                 |
+| /ch leave [channel]           | Leave the specified channel                |
+| /msg [player] [message]       | Send a private message to specified player |
+| /r [message]                  | Quickly reply to last private message      |
+| /mail send [player] [message] | Send private mail to specified player      |
+| /mail read                    | Read all incoming mails                    |
+| /mail clear                   | Clear your mailbox                         |
+| /ignore [player]              | Ignore specified player                    |
+| /unignore [player]            | Stop ignoring specified player             |
 
 ## Chat format
 The chat format in the global chat is as follows:
@@ -21,14 +59,13 @@ The chat format in the global chat is as follows:
 **[townname│nationname] playername: message**
 
 ### Prefixes
-Some players have prefixes displayed before the format shown above. The available prefixes are:
+Some players have prefixes displayed before the format or before the player's name. The available prefixes are:
+* **Ⓚ** - Leader of nation.
 * **+** - Plus prefix is the legacy donator rank. These awesome veterans helped fund the server's early days.
 * **Dev** - Server plugin developer.
 * **Helper** - Nice players who know a lot about the server. Ask them if you have any questions about the server.
 * **Mod** - Mods manage the game, help players, and enforce server rules. 
 * **Admin** - Server admins manage the back-end infrastructure and are responsible for the server as a whole. 
-
-Nation kings have a K prefix before their name.
 
 ### Premium
 Players with [premium](https://store.earthmc.net/category/premium) have pink square brackets and golden usernames.
