@@ -8,7 +8,15 @@ custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/api.
 ---
 ## Accessing the API
 
-The API can be accessed through the URL `api.earthmc.net`. It provides data in JSON format, the endpoints are as follows:
+The API can be accessed through the URL `api.earthmc.net`. It provides data in JSON format.
+
+Some things to keep in mind when using the API:
+
+* Some data is placed in arrays to ensure order is maintained when creating the JSON, namely coordinates and permissions. Their order corresponds to their in-game order.
+* As of v2, data is omitted if it does not exist. For example, if a town is not in a nation it will not show the "nation" key. This is to save on data transferred and to make handling of non-existent values consistent, it is recommended you use try-catch or your language of choice's equivalent when handling any data that may not be present.
+* Prior version endpoint functionality has been maintained if you would prefer to use older versions.
+
+The endpoints are as follows:
 
 ### Server endpoint
 
@@ -44,15 +52,17 @@ List endpoints simply list the names of all the objects in the specified type, i
 
 ## Changelog since /v1/
 
-* Added "list endpoints" that just display the names of objects in case all you need is names, these are effectively the same as the old `https://api.earthmc.net/v1/aurora/{type}/` endpoints
-* Moved the num{Residents/Towns/Nations} stats to `https://api.earthmc.net/v2/aurora/`
 * `https://api.earthmc.net/v2/aurora/{type}/` now lists all the data of every object within the specified type, they are referred to as "bulk endpoints"
+* Added "list endpoints" that just display the names of objects in case all you need is names, these are effectively the same as the old `https://api.earthmc.net/v1/aurora/{type}/` endpoints
 * List and bulk resident lookups have been split into "residents" and "townless", this is mainly intended to ease the amount of data sent if all you need is just players with towns
 * Values are no longer present if they do not exist, i.e. not in a town = no town key
+* Some data such as permissions and coordinates have been switched to an array format to keep their order when converting to JSON
+* TownBlock coordinates have been added to town lookups
+* Moved the num{Residents/Towns/Nations} stats to `https://api.earthmc.net/v2/aurora/`
+* "affiliation" values have been moved to the "strings" section
 * Added numTownless, numOnlineTownless, and numTownBlocks stat to `https://api.earthmc.net/v2/aurora/`
 * Player lookups now have an isNPC stat to easily filter out NPCs programmatically
-* Town and nation lookups now have UUIDs
-* Town and nation UUIDs can now be used in lookups
+* Town and nation lookups now have UUIDs, they can be used for lookups to track things even when they change name
 
 ## Usage example
 
