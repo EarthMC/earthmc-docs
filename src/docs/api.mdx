@@ -7,36 +7,80 @@ sidebar_label: API
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/api.mdx
 ---
 ## Accessing the API
-The API can be accessed through the URL `api.earthmc.net`. It provides data in JSON format and consists of 4 main endpoints that provide Towny data:
-* `/v1/aurora/`
-* `/v1/aurora/residents/`
-* `/v1/aurora/towns/`
-* `/v1/aurora/nations/`
 
-## Endpoint details
-### Server info endpoint
-This endpoint is the most simplistic providing information such as the number of online players, the player capacity, current weather and time.
+The API can be accessed through the URL `api.earthmc.net`. It provides data in JSON format.
 
-### Residents endpoint
-To get more specific data on a resident you can append their username or UUID to the end of the residents URL. For example, `api.earthmc.net/v1/aurora/residents/Fruitloopins` will return information about the resident Fruitloopins. It will include their town and nation affiliation, gold balance, title and surname, and their town and nation ranks.
+Some things to keep in mind when using the API:
 
-### Towns endpoint
-Accessed at `api.earthmc.net/v1/aurora/towns/`, this endpoint provides a key showing the number of towns along with a list of all towns. A town name can be appended to the end of the URL to query specific information about that town. Those will be all the residents in it, date of foundation, all the players with ranks in the town and much more.
+* Some data is placed in arrays to ensure order is maintained when creating the JSON, namely coordinates and permissions. Their order corresponds to their in-game order.
+* As of v2, data is omitted if it does not exist. For example, if a town is not in a nation it will not show the "nation" key. This is to save on data transferred and to make handling of non-existent values consistent, it is recommended you use try-catch or your language of choice's equivalent when handling any data that may not be present.
+* Prior version endpoint functionality has been maintained if you would prefer to use older versions.
 
-### Nations endpoint
-Nation data can be accessed through the URL `api.earthmc.net/v1/aurora/nations/`. Just like with towns, it will show the quantity of nations and a list of all nations. You can access data about a specific nation by appending the nation name to the end of the URL i.e. `/nations/Cascadia`. This will return info such as the nation's board message, it's residents, when it was founded, and its `/n spawn` coordinates.
+The endpoints are as follows:
+
+### Server endpoint
+
+* `/v2/aurora/`
+
+The server endpoint provides some basic info about the server such as the number of online players or the amount of towns.
+
+### Bulk endpoints
+
+* `/v2/aurora/residents/`
+* `/v2/aurora/towns/`
+* `/v2/aurora/nations/`
+
+Bulk endpoints contain all of the objects of the specified type and all their associated data so you do not need to individually request all of them.
+
+### Lookup endpoints
+
+* `/v2/aurora/residents/{name}/`
+* `/v2/aurora/towns/{name}/`
+* `/v2/aurora/nations/{name}/`
+
+Lookup endpoints provide info on one thing at a time, for instance a single player or town.
+
+### List endpoints
+
+* `/v2/aurora/lists/residents/`
+* `/v2/aurora/lists/towns/`
+* `/v2/aurora/lists/nations/`
+
+List endpoints simply list the names of all the objects in the specified type, if you want their data you will need to individually look them up. It is recommended you use the above bulk endpoints if you need the data of everything.
+
+## Changelog since /v1/
+
+* QOL changes:
+  * `https://api.earthmc.net/v2/aurora/{type}/` now lists all the data of every object within the specified type, they are referred to as "bulk endpoints"
+  * Values are no longer present if they do not exist, i.e. not in a town = no town key
+  * Some data such as permissions and coordinates have been switched to an array format to keep their order when converting to JSON
+  * JSON returned by the API is now in a consistent order
+
+* New data:
+  * Coordinates of each townblock have been added to town lookups
+  * Added numTownless, numOnlineTownless, and numTownBlocks stat to `https://api.earthmc.net/v2/aurora/`
+  * Town and nation lookups now have UUIDs, they can be used for lookups to track things even when they change name
+  * Player lookups now have an isNPC stat to easily filter out NPCs programmatically
+
+* Layout changes:
+  * Added "list endpoints" that just display the names of objects in case all you need is names, these are effectively the same as the old `https://api.earthmc.net/v1/aurora/{type}/` endpoints
+  * Moved the num{Residents/Towns/Nations} stats to `https://api.earthmc.net/v2/aurora/`
+  * "affiliation" values have been moved to the "strings" section
+  * "strings" section is no longer an object and is in the lowest level of lookups
 
 ## Usage example
 
 Print a list of all nations that a nation still needs to ally:
 ```py
+import requests
+
 nation = "Australia"
 
-allNationsLookup = requests.get("https://api.earthmc.net/v1/aurora/nations/").json()
-nationsLookup = requests.get(f"https://api.earthmc.net/v1/aurora/nations/{nation}").json()
+allNationsLookup = requests.get("https://api.earthmc.net/v2/aurora/lists/nations/").json()
+nationsLookup = requests.get(f"https://api.earthmc.net/v2/aurora/nations/{nation}").json()
 
 allyList = nationsLookup["allies"]
-allNations = allNationsLookup["allNations"]
+allNations = allNationsLookup
 allNations.remove(nationsLookup["strings"]["nation"])
 
 unalliedList = list(set(allNations).difference(set(allyList)))
