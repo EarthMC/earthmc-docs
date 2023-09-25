@@ -5,7 +5,7 @@ hide_table_of_contents: false
 ---
 
 ## Summary
-Overclaim, the ability under certain circumstances claim over already claimed chunks, will come to EarthMC early next year. This change will be made in order to balance gameplay, increase map longevity and combat the issue of dead towns squatting land. The topic of overclaim has been debated both internally and within the community for the past few months. I think the community deserves know what's behind this decsion, how overclaim will actually work and why it will benefit the server. This change does not affect towns with 88 or less chunks claimed.
+Overclaim, the ability under certain circumstances to claim over already claimed chunks, will come to EarthMC early next year. This change will be made in order to balance gameplay, increase map longevity and combat the issue of dead towns squatting land. The topic of overclaim has been debated both internally and within the community for the past few months. I think the community deserves know what's behind this decsion, how overclaim will actually work and why it will benefit the server. This change does not affect towns with 88 or less chunks claimed.
 Overclaiming will be introduced 2024-01-01. A grace period will start this sunday 2023-10-01 in order to make a smooth transition. More details below.
 
 ## How the claim limit currently works
