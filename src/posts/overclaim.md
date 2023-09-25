@@ -1,4 +1,3 @@
-
 ---
 slug: /overclaim
 title: Overclaim whitepaper
