@@ -12,8 +12,8 @@ authors:
 ---
 
 ## Summary
-Overclaim, the ability under certain circumstances to claim over already claimed chunks, will come to EarthMC early next year. This change will be made in order to balance gameplay, increase map longevity and combat the issue of dead towns squatting land. The topic of overclaim has been debated both internally and within the community for the past few months. I think the community deserves know what's behind this decsion, how overclaim will actually work and why it will benefit the server. This change does not affect towns with 88 or less chunks claimed.
-Overclaiming will be introduced 2024-01-01. A grace period will start this sunday 2023-10-01 in order to make a smooth transition. More details below.
+Overclaim, the ability under certain circumstances to claim over already claimed chunks, will come to EarthMC early next year. This change will be made in order to balance gameplay, increase map longevity and combat the issue of dead towns squatting land. The topic of overclaim has been debated both internally and within the community for the past few months. The community deserves know what's behind this decsion, how overclaim will actually work and why it will benefit the server. This change does not affect towns with 88 or less chunks claimed.
+Overclaiming will be introduced 2024-01-01. A grace period will start this 2023-10-01 in order to make a smooth transition. More details below.
 
 ## How the claim limit currently works
 It’s important to fully understand how the current claim limit works in order to understand overclaiming. Let’s use the fictional town Åköping as an example. The total amount of land the town Åköping has claimed and the total claim limit is represented on its town board (/t Åköping) as follows:
@@ -30,7 +30,7 @@ The 100 already claimed chunks are unaffected. The only downside of having more 
 ## The purpose of the current claim limit
 From the above example it is clear that residents are directly tied to a town's ability to expand. This has been a core gameplay mechanic since EarthMC launched in 2016. The idea behind tying resident count to town size seems logical, residents need somewhere to build their homes and by doing so they warrant land expansion. Land is limited and has to be shared by players in order for the gameplay loop to work. It therefore makes sense to tie the claim limit to resident count instead of other resources such as gold.
 
-## The problem - claim inflation
+## The hidden problem - claim inflation
 Towns never decrease in size even after residents leave. A resident called Bertil wants to leave a town that is fully claimed. Throughout his time on the server Bertil joins 7 different towns. In each town the mayor uses the 8 claims Bertil has increased the claim limit by. Bertil alone has now spawned 7x8=56 claims. These 56 chunks will never be unclaimed. Claims are inflated for every resident joining a town. The real life equivalent would be something similar to moving places but all past homes must sit empty and take up space. This becomes an issue as land is a limited resource.
 
 More commonly, a resident joins a town and then goes inactive forever. A third of all new players leave never to return after their first join. Even so, the 8 claims the resident has contributed to are claimed forever even though those claims will never be used by the player. 8 chunks forever claimed for every one-off player, players of which there are hundreds every day.
