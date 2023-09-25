@@ -4,11 +4,9 @@ title: Overclaim whitepaper
 hide_table_of_contents: false
 authors:
   - name: Fix
-    url: https://github.com/FixTheAdmin
     title: Owner
     image_url: https://github.com/FixTheAdmin.png
   - name: CorruptedGreed
-    url: https://github.com/CorruptedGreed
     title: Admin
     image_url: https://github.com/CorruptedGreed.png
 ---
