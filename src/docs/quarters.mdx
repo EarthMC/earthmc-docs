@@ -1,0 +1,51 @@
+---
+slug: /quarters
+title: Quarters
+description: Learn how to use the plugin Quarters on EarthMC
+sidebar_position: 15
+sidebar_label: Quarters Plugin
+custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/quarters.mdx
+---
+## What is Quarters?
+
+Quarters is a custom plugin made for and by EarthMC that extends the functionality of towns to allow the creation of apartments. Standard towns are restricted to a simple grid-based system that requires giving ownership of an entire chunk.
+
+## Creating a Quarter
+
+To create a quarter you need to be the mayor of your town or have the realtor rank, then you can select two positions using the wand item which is configured to be flint. With two positions selected an outline of a cuboid will appear showing your selection while you are holding the wand item. To proceed type `/q selection add`, if you would like to add more cuboids to your selection repeat selecting two positions and adding them with the same command.
+
+:::tip
+
+If you cannot get access to a flint you can use `/q pos1` and `/q pos2` to select at your feet.
+
+:::
+
+With your cuboids selected run the command `/q create`, if you have the necessary permissions this will turn all your selected cuboids into a quarter. These cuboids will all share a particle outline and permissions.
+
+Remain aware that any cuboids added will be validated before creation to ensure that they are in a valid location. If you are having issues with creating a new quarter check the below:
+
+- The quarter is entirely within a single town
+- There is no wilderness within any of the cuboid's bounds
+- Your selected cuboids do not overlap with any pre-existing cuboids
+
+## Permission Management
+
+To sell a quarter stand within its bounds and type `/q sell {price}`, a player can then purchase it using `/q claim` while standing inside it. The owner of a quarter can add people they trust to share perms with them using `/q trust add {username}`. By default quarters will be of the "apartment" type, the most basic type. Read below for more on quarter types.
+
+You must first turn the quarter into an embassy using `/q toggle embassy` to sell to a player who is not a resident of the quarter's town. If the quarter's embassy status is removed the non-resident owner's ownership will be revoked.
+
+## Quarter Types
+
+All quarter types are additive to the functionality of the default apartment type, below is a short description of the others.
+
+### Commons
+
+Allows for any resident in the quarter's town to switch and itemuse within the quarter's bounds, this can be extended to any player by turning the quarter into an embassy using `/q toggle embassy`.
+
+### Shop
+
+The shop type allows the creation of shops independent of the underlying plot's shop status.
+
+### Station
+
+Station type quarters allow residents of the quarter's town to place, use and destroy boats and minecarts within the quarter's bounds. Similarly to the commons quarter type this can be extended to any player regardless of their town affiliation using `/q toggle embassy`.
