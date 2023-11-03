@@ -31,9 +31,7 @@ Remain aware that any cuboids added will be validated before creation to ensure 
 
 ## Permission management
 
-To sell a quarter stand within its bounds and type `/q sell {price}`, a player can then purchase it using `/q claim` while standing inside it. The owner of a quarter can add people they trust to share perms with them using `/q trust add {username}`. By default quarters will be of the "apartment" type, the most basic type. Read below for more on quarter types.
-
-You must first turn the quarter into an embassy using `/q toggle embassy` to sell to a player who is not a resident of the quarter's town. If the quarter's embassy status is removed the non-resident owner's ownership will be revoked.
+As opposed to [plots](https://earthmc.net/docs/town#plots), you can *not* change individual build/destroy/switch/item per quarter. Instead, you can chose to trust or not trust other players with full access to the quarter. Commands `/q trust add` or `/q trust remove` is used to manage who to trust with the quarter. Furthermore, you may change quarter type which also change what type of permissions players in the quarter have. Read more about plot types below.
 
 :::warning
 
@@ -41,15 +39,23 @@ Quarter permissions override the underlying plot permissions.
 
 :::
 
+
 ## Quarter types
 
 All quarter types are additive to the functionality of the default apartment type, below is a short description of the others.
 
-| Quarter Type | Description                                                                                                                             |
-|--------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Commons      | Permits any resident in the quarter's town to use switches and items within its bounds. Extendable to all players as an embassy.         |
-| Shop         | Allows for the creation of shops, regardless of the underlying plot's shop status.                                                      |
-| Station      | Enables residents of the quarter's town to place, use, and destroy boats and minecarts within its bounds. Extendable to all players.    |
+| Quarter Type | Description                                                                                                                                                   |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Apartment    | The default quarter type, which can have an owner who can set trusted users. The owner, trusted users, and those with permissions in the underlying Towny plot can alter this quarter type. All other quarter types inherit and add to this functionality. |
+| Commons      | Permits any resident in the quarter's town to use switches and items within its bounds. Extendable to all players as an embassy.                               |
+| Shop         | Allows for the creation of shops, regardless of the underlying plot's shop status.                                                                            |
+| Station      | Enables residents of the quarter's town to place, use, and destroy boats and minecarts within its bounds. Extendable to all players.                          |
+
+
+## Sell or buy quarters
+
+To sell a quarter stand within its bounds and type `/q sell {price}`, a player can then purchase it using `/q claim` while standing inside it. You must first turn the quarter into an embassy using `/q toggle embassy` to sell to a player who is not a resident of the quarter's town. If the quarter's embassy status is removed the non-resident owner's ownership will be revoked.
+
 
 ## Commands
 
