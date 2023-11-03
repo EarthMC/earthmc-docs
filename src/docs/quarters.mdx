@@ -60,29 +60,32 @@ Station type quarters allow residents of the quarter's town to place, use and de
 
 ## Commands
 
-:::tip[Premium colour feature]
+:::tip Premium colour feature
 
 Players with [Premium](https://earthmc.net/docs/premium) can change quarter particle outline colour with `/q colour {r} {g} {b}`. RGB takes in three int values between 0-255.
 
 :::
 
-/quarters (/q)
-claim: used to claim a quarter that is for sale
-create: used to turn a selection into a quarter
-delete: used to delete the quarter you are currently standing in
-evict: used to evict the owner of the quarter you are standing in
-here: used to view information about the quarter you are standing in
-pos1 & pos2: command bypass to set positions without a wand
-add: adds a selected cuboid to your current selection
-remove: removes the cuboid you are standing in from your current selection
-sell: used to put a quarter up for sale
-{price}: price to sell quarter for
-
-toggle:
-embassy: used to toggle a quarter's embassy status
-trust:
-add: add a resident as trusted in a quarter, this will allow them the same build, switch, destroy and itemuse permissions as the owner
-remove: remove a resident as trusted in a quarter
-clear: remove all trusted residents from a quarter
-type {type}: used to change a quarter's type
-unclaim: used to relinquish ownership of a quarter
+| Command          | Action                                                           |
+|------------------|------------------------------------------------------------------|
+| `/q claim`       | Claim a quarter that is for sale.                                |
+| `/q create`      | Turn a selected area into a quarter.                             |
+| `/q delete`      | Delete the quarter you are currently standing in.                |
+| `/q evict`       | Evict the owner of the quarter you are standing in.              |
+| `/q here`        | View information about the quarter you are standing in.          |
+| `/q pos1 & pos2` | Command bypass to set positions without a wand.                  |
+| `/q add`         | Adds a selected cuboid to your current selection.                |
+| `/q remove`      | Removes the cuboid you are standing in from your current selection. |
+| `/q sell {price}`| Put a quarter up for sale with the specified price.               |
+| `/q toggle embassy` | Toggle a quarter's embassy status on or off.                   |
+| `/q trust add`   | Add a resident as trusted in a quarter.                          |
+| `/q trust remove`| Remove a resident as trusted in a quarter.                       |
+| `/q trust clear` | Remove all trusted residents from a quarter.                     |
+| `/q type {type}` | Change a quarter's type to the specified category.               |
+| `/q unclaim`     | Relinquish ownership of a quarter.                               |
+| `/q toggle embassy`      | Used to toggle a quarter's embassy status.                                                    |
+| `/q trust add`           | Add a resident as trusted in a quarter, granting them the same permissions as the owner.      |
+| `/q trust remove`        | Remove a resident's trusted status in a quarter.                                              |
+| `/q trust clear`         | Remove all trusted residents from a quarter.                                                  |
+| `/q type {type}`         | Change a quarter's type to the specified category.                                            |
+| `/q unclaim`             | Relinquish ownership of a quarter.                                                            |
