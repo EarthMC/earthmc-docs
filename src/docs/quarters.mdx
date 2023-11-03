@@ -3,18 +3,18 @@ slug: /quarters
 title: Quarters
 description: Learn how to use the plugin Quarters on EarthMC
 sidebar_position: 15
-sidebar_label: Quarters Plugin
+sidebar_label: Quarters
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/quarters.mdx
 ---
 ## What is Quarters?
 
-Quarters is a custom plugin made for and by EarthMC that extends the functionality of towns to allow the creation of apartments. Standard towns are restricted to a simple grid-based system that requires giving ownership of an entire chunk.
+Quarters extends the functionality of towns and plots to allow the creation of apartments. Standard [plots](https://earthmc.net/docs/town#plots) are restricted to a simple grid-based system that requires allowing and restricting permissions of an entire chunk. Quarters can instead create dynamically sized cuboids in which permissions can be edited.
 
 ![quarters](/img/quarters.png)
 
 ## Creating a Quarter
 
-To create a quarter you need to be the mayor of your town or be a councillor, then you can select two positions using the wand item which is configured to be flint. With two positions selected an outline of a cuboid will appear showing your selection while you are holding the wand item. To proceed type `/q selection add`, if you would like to add more cuboids to your selection repeat selecting two positions and adding them with the same command.
+To create a quarter you need to be the mayor or councillor, then you can select two positions using a flint item. With two positions selected an outline of a cuboid will appear showing your selection while you are holding the wand item. To proceed type `/q selection add`, if you would like to add more cuboids to your selection repeat selecting two positions and adding them with the same command.
 
 :::tip
 
@@ -36,6 +36,12 @@ To sell a quarter stand within its bounds and type `/q sell {price}`, a player c
 
 You must first turn the quarter into an embassy using `/q toggle embassy` to sell to a player who is not a resident of the quarter's town. If the quarter's embassy status is removed the non-resident owner's ownership will be revoked.
 
+:::warning
+
+Quarter permissions override the underlying plot permissions.
+
+:::
+
 ## Quarter Types
 
 All quarter types are additive to the functionality of the default apartment type, below is a short description of the others.
@@ -51,3 +57,32 @@ The shop type allows the creation of shops independent of the underlying plot's 
 ### Station
 
 Station type quarters allow residents of the quarter's town to place, use and destroy boats and minecarts within the quarter's bounds. Similarly to the commons quarter type this can be extended to any player regardless of their town affiliation using `/q toggle embassy`.
+
+## Commands
+
+:::tip[Premium colour feature]
+
+Players with [Premium](https://earthmc.net/docs/premium) can change quarter particle outline colour with `/q colour {r} {g} {b}`. RGB takes in three int values between 0-255.
+
+:::
+
+/quarters (/q)
+claim: used to claim a quarter that is for sale
+create: used to turn a selection into a quarter
+delete: used to delete the quarter you are currently standing in
+evict: used to evict the owner of the quarter you are standing in
+here: used to view information about the quarter you are standing in
+pos1 & pos2: command bypass to set positions without a wand
+add: adds a selected cuboid to your current selection
+remove: removes the cuboid you are standing in from your current selection
+sell: used to put a quarter up for sale
+{price}: price to sell quarter for
+
+toggle:
+embassy: used to toggle a quarter's embassy status
+trust:
+add: add a resident as trusted in a quarter, this will allow them the same build, switch, destroy and itemuse permissions as the owner
+remove: remove a resident as trusted in a quarter
+clear: remove all trusted residents from a quarter
+type {type}: used to change a quarter's type
+unclaim: used to relinquish ownership of a quarter
