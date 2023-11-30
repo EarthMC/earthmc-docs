@@ -13,7 +13,7 @@ Quarters extends the functionality of towns and plots to allow the creation of a
 
 ## Creating a quarter
 
-To create a quarter you need to be the mayor or councillor, then you can select two positions using a flint item. With two positions selected, an outline of a cuboid will appear showing your selection while you are holding the wand item (flint). To proceed type `/q selection add`, if you would like to add more cuboids to your selection, repeat selecting two positions and adding them with the same command.
+To create a quarter you need to be the mayor or councillor, then you can select two positions using flint, this is the "wand" item in Quarters. With two positions selected, an outline of a cuboid will appear showing your selection while you are holding the wand. To proceed type `/q selection add`, if you would like to add more cuboids to your selection, repeat selecting two positions and adding them with the same command.
 
 :::tip
 
@@ -31,7 +31,7 @@ The following requirements must be met in order to create a quarter:
 - There is no wilderness within any of the cuboid's bounds
 - Your selected cuboids do not overlap with any pre-existing cuboids
 
-Existing quarters will be deleted if any of the above requirements are no longer true, for example if the underlying land is unclaimed or town is deleted.
+Existing quarters will be deleted if any of the above requirements are no longer true, for example if the underlying townblock is unclaimed or the town is deleted.
 
 ## Permission management
 
@@ -46,7 +46,7 @@ Quarter permissions override the underlying plot permissions.
 
 ## Quarter types
 
-All quarter types are additive to the functionality of the default apartment type. Players who have access to the underlying plot can change quarter type.
+All quarter types are additive to the functionality of the default apartment type. Mayors and councillors can change a quarter's type with `/q type {type}`.
 
 | Quarter Type | Description                                                                                                                                                   |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,6 +62,12 @@ To sell a quarter, stand within its bounds and type `/q sell {price}`, a player 
 
 
 ## Commands
+
+:::tip Premium colour feature
+
+Players with [Premium](https://earthmc.net/docs/premium) can change a quarter's particle outline colour with `/q colour {r} {g} {b}`. The 3 arguments are integer values between 0-255 representing an RGB colour.
+
+:::
 
 | Command          | Action                                                           |
 |------------------|------------------------------------------------------------------|
