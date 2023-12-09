@@ -13,7 +13,7 @@ Quarters extends the functionality of towns and plots to allow the creation of a
 
 ## Creating a quarter
 
-To create a quarter you need to be the mayor or councillor, then you can select two positions using a flint item. With two positions selected an outline of a cuboid will appear showing your selection while you are holding the wand item. To proceed type `/q selection add`, if you would like to add more cuboids to your selection repeat selecting two positions and adding them with the same command.
+To create a quarter you need to be the mayor or councillor, then you can select two positions using flint, this is the "wand" item in Quarters. With two positions selected, an outline of a cuboid will appear showing your selection while you are holding the wand. To proceed type `/q selection add`, if you would like to add more cuboids to your selection, repeat selecting two positions and adding them with the same command.
 
 :::tip
 
@@ -31,11 +31,11 @@ The following requirements must be met in order to create a quarter:
 - There is no wilderness within any of the cuboid's bounds
 - Your selected cuboids do not overlap with any pre-existing cuboids
 
-Existing quarter will be deleted if any of the above requirements are no longer true, for example if the underlying land is unclaimed or town is deleted.
+Existing quarters will be deleted if any of the above requirements are no longer true, for example if the underlying townblock is unclaimed or the town is deleted.
 
 ## Permission management
 
-As opposed to [plots](https://earthmc.net/docs/town#plots), you can *not* change individual build/destroy/switch/item per quarter. Instead, you can chose to trust or not trust other players with full access to the quarter. Commands `/q trust add` or `/q trust remove` is used to manage who to trust with the quarter. Furthermore, you may change quarter type which also change what type of permissions players in the quarter have. Read more about plot types below.
+As opposed to [plots](https://earthmc.net/docs/town#plots), you can *not* change individual build/destroy/switch/item per quarter. Instead, you can choose to trust or not trust other players with full access to the quarter. The commands `/q trust add` and `/q trust remove` are used to manage who to trust with the quarter. Furthermore, you may change quarter type which also changes what type of permissions players in the quarter have. Read more about quarter types below.
 
 :::info
 
@@ -46,7 +46,7 @@ Quarter permissions override the underlying plot permissions.
 
 ## Quarter types
 
-All quarter types are additive to the functionality of the default apartment type. Players who has access to the underlying plot can change quarter type.
+All quarter types are additive to the functionality of the default apartment type. Mayors and councillors can change a quarter's type with `/q type {type}`.
 
 | Quarter Type | Description                                                                                                                                                   |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,14 +58,14 @@ All quarter types are additive to the functionality of the default apartment typ
 
 ## Sell or buy quarters
 
-To sell a quarter stand within its bounds and type `/q sell {price}`, a player can then purchase it using `/q claim` while standing inside it. You must first turn the quarter into an embassy using `/q toggle embassy` to sell to a player who is not a resident of the quarter's town. If the quarter's embassy status is removed the non-resident owner's ownership will be revoked.
+To sell a quarter, stand within its bounds and type `/q sell {price}`, a player can then purchase it using `/q claim` while standing inside it. To sell to a player who is not a resident of the quarter's town, you must first turn the quarter into an embassy using `/q toggle embassy`. If the quarter's embassy status is removed the non-resident owner's ownership will be revoked.
 
 
 ## Commands
 
 :::tip Premium colour feature
 
-Players with [Premium](https://earthmc.net/docs/premium) can change quarter particle outline colour with `/q colour {r} {g} {b}`. RGB takes in three int values between 0-255.
+Players with [Premium](https://earthmc.net/docs/premium) can change a quarter's particle outline colour with `/q colour {r} {g} {b}`. The 3 arguments are integer values between 0-255 representing an RGB colour.
 
 :::
 
@@ -81,14 +81,9 @@ Players with [Premium](https://earthmc.net/docs/premium) can change quarter part
 | /q remove      | Removes the cuboid you are standing in from your current selection. |
 | /q sell {price}| Put a quarter up for sale with the specified price.               |
 | /q toggle embassy | Toggle a quarter's embassy status on or off.                   |
-| /q trust add   | Add a resident as trusted in a quarter.                          |
-| /q trust remove| Remove a resident as trusted in a quarter.                       |
+| /q trust add   | Add a resident as trusted in a quarter, granting them the same permissions as the owner.                          |
+| /q trust remove| Remove a resident's trusted status in a quarter.                       |
 | /q trust clear | Remove all trusted residents from a quarter.                     |
 | /q type {type} | Change a quarter's type to the specified category.               |
 | /q unclaim     | Relinquish ownership of a quarter.                               |
-| /q toggle embassy      | Used to toggle a quarter's embassy status.                                                    |
-| /q trust add           | Add a resident as trusted in a quarter, granting them the same permissions as the owner.      |
-| /q trust remove        | Remove a resident's trusted status in a quarter.                                              |
-| /q trust clear         | Remove all trusted residents from a quarter.                                                  |
-| /q type {type}         | Change a quarter's type to the specified category.                                            |
-| /q unclaim             | Relinquish ownership of a quarter.                                                            |
+| /q colour {r} {g} {b} | Change a quarter's particle outline colour. The arguments represent an RGB colour.             |
