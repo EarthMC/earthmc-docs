@@ -35,31 +35,28 @@ Existing quarters will be deleted if any of the above requirements are no longer
 
 ## Permission management
 
-As opposed to [plots](https://earthmc.net/docs/town#plots), you can *not* change individual build/destroy/switch/item per quarter. Instead, you can choose to trust or not trust other players with full access to the quarter. The commands `/q trust add` and `/q trust remove` are used to manage who to trust with the quarter. Furthermore, you may change quarter type which also changes what type of permissions players in the quarter have. Read more about quarter types below.
+As opposed to [plots](https://earthmc.net/docs/town#plots), you can _not_ change individual build/destroy/switch/item per quarter. Instead, you can choose to trust or not trust other players with full access to the quarter. The commands `/q trust add` and `/q trust remove` are used to manage who to trust with the quarter. Furthermore, you may change quarter type which also changes what type of permissions players in the quarter have. Read more about quarter types below.
 
 :::info
 
-Quarter permissions override the underlying plot permissions. 
+Quarter permissions override the underlying plot permissions.
 
 :::
-
 
 ## Quarter types
 
 All quarter types are additive to the functionality of the default apartment type. Mayors and councillors can change a quarter's type with `/q type {type}`.
 
-| Quarter Type | Description                                                                                                                                                   |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Quarter Type | Description                                                                                                                             |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Apartment    | The default quarter type. The owner, trusted users, and those with permissions in the underlying town plot can alter this quarter type. |
-| Commons      | Permits any resident in the quarter's town to use switches and items within its bounds. Extendable to all players as an embassy.                               |
-| Shop         | Allows for the creation of shops, regardless of the underlying plot's shop status.                                                                            |
-| Station      | Enables residents of the quarter's town to place, use, and destroy boats and minecarts within its bounds. Extendable to all players.                          |
-
+| Commons      | Permits any resident in the quarter's town to use switches and items within its bounds. Extendable to all players as an embassy.        |
+| Shop         | Allows for the creation of shops, regardless of the underlying plot's shop status.                                                      |
+| Station      | Enables residents of the quarter's town to place, use, and destroy boats and minecarts within its bounds. Extendable to all players.    |
 
 ## Sell or buy quarters
 
 To sell a quarter, stand within its bounds and type `/q sell {price}`, a player can then purchase it using `/q claim` while standing inside it. To sell to a player who is not a resident of the quarter's town, you must first turn the quarter into an embassy using `/q toggle embassy`. If the quarter's embassy status is removed the non-resident owner's ownership will be revoked.
-
 
 ## Commands
 
@@ -69,21 +66,21 @@ Players with [Premium](https://earthmc.net/docs/premium) can change a quarter's 
 
 :::
 
-| Command          | Action                                                           |
-|------------------|------------------------------------------------------------------|
-| /q claim       | Claim a quarter that is for sale.                                |
-| /q create      | Turn a selected area into a quarter.                             |
-| /q delete      | Delete the quarter you are currently standing in.                |
-| /q evict       | Evict the owner of the quarter you are standing in.              |
-| /q here        | View information about the quarter you are standing in.          |
-| /q pos1 & pos2 | Command bypass to set positions without a wand.                  |
-| /q add         | Adds a selected cuboid to your current selection.                |
-| /q remove      | Removes the cuboid you are standing in from your current selection. |
-| /q sell {price}| Put a quarter up for sale with the specified price.               |
-| /q toggle embassy | Toggle a quarter's embassy status on or off.                   |
-| /q trust add   | Add a resident as trusted in a quarter, granting them the same permissions as the owner.                          |
-| /q trust remove| Remove a resident's trusted status in a quarter.                       |
-| /q trust clear | Remove all trusted residents from a quarter.                     |
-| /q type {type} | Change a quarter's type to the specified category.               |
-| /q unclaim     | Relinquish ownership of a quarter.                               |
-| /q colour {r} {g} {b} | Change a quarter's particle outline colour. The arguments represent an RGB colour.             |
+| Command               | Action                                                                                   |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| /q claim              | Claim a quarter that is for sale.                                                        |
+| /q create             | Turn a selected area into a quarter.                                                     |
+| /q delete             | Delete the quarter you are currently standing in.                                        |
+| /q evict              | Evict the owner of the quarter you are standing in.                                      |
+| /q here               | View information about the quarter you are standing in.                                  |
+| /q pos1 & pos2        | Command bypass to set positions without a wand.                                          |
+| /q add                | Adds a selected cuboid to your current selection.                                        |
+| /q remove             | Removes the cuboid you are standing in from your current selection.                      |
+| /q sell [price]       | Put a quarter up for sale with the specified price.                                      |
+| /q toggle embassy     | Toggle a quarter's embassy status on or off.                                             |
+| /q trust add          | Add a resident as trusted in a quarter, granting them the same permissions as the owner. |
+| /q trust remove       | Remove a resident's trusted status in a quarter.                                         |
+| /q trust clear        | Remove all trusted residents from a quarter.                                             |
+| /q type [type]        | Change a quarter's type to the specified category.                                       |
+| /q unclaim            | Relinquish ownership of a quarter.                                                       |
+| /q colour [r] [g] [b] | Change a quarter's particle outline colour. The arguments represent an RGB colour.       |
