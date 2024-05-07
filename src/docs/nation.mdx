@@ -6,20 +6,23 @@ sidebar_position: 8
 sidebar_label: Nation Guide
 custom_edit_url: https://github.com/EarthMC/earthmc-docs/blob/main/src/docs/nation.mdx
 ---
+
 # Nation guide
 
 ![town](/img/nation.webp)
 
 ## Create a nation
-Creating a new nation costs 1024 gold on Terra Nova and 2048 gold on Terra Aurora. Make sure you deposited the required amount in town's bank via `/t deposit <amount>`. Only a mayor of a town can create a nation. The mayor's town will become the nation capital. Create the nation with `/n new <name>`.
+
+Creating a new nation costs 2048 gold on Aurora and 1024 gold on Terra Nova. Make sure you have deposited the required amount to the town's bank via `/t deposit <amount>`. Only the mayor of a town can create a nation. The mayor's town will become the nation capital. Create the nation with `/n new <name>`.
 
 :::caution
 
-Make sure your nation's name complies with the nation naming [rules](https://earthmc.net/docs/rules).
+Make sure your nation's name complies with the nation naming rules in rule 2.1 [rules](https://earthmc.net/docs/rules).
 
 :::
 
 ## Nation basics
+
 As a nation leader, you can add allies with `/n ally add <nation>` and invite towns to your nation with `/n add <town>`. Do note that a town needs to be within a radius of 3500 blocks from your capital's home plot to be eligible for invitation.
 
 Give and remove ranks from residents of your nation with `/n rank add <player> <rank>` or `/n rank remove <player> <rank>`. You can also kick towns from the nation with `/n kick <town>`, delete the nation with `/n delete`, toggle public joining to your nation with `/n toggle open`, and set the nation's spawn location anywhere within your capital with `/n set spawn`.
@@ -29,32 +32,40 @@ Due to nations starting with no allies, you will likely want to get a lot as qui
 As your nation gains more citizens, your ranking on `/n list` will increase. Nations fight each other to be on the top of this list as it shows who has put the most time into recruiting towns and players, which is a good indicator of activity. Nations (as well as towns) can also compete in a few categories. These leaderboards can be seen via `/nation (or /town) list by category` (categories should be automatically shown to the command sender).
 
 ## Nation ranks
+
 Nation kings can give nation residents ranks with `/n rank add <player> <rank>`.
 
-* **Chancellor** allows the player to do everything a king can do, except of: deleting the nation, setting the capital and setting the king. This is a dangerous rank to give as a player! The unwanted individual could remove allies or kick every town from your nation.
-* **Colonists** may invite towns to the nation.
-* **Royal-treasurers** can not only deposit, but also withdraw gold from the national bank.
-* **Diplomats** are able to send, accept and deny nation ally requests.
+- **Chancellor** allows the player to do everything a king can do, except of: deleting the nation, setting the capital and setting the king. This is a dangerous rank to give as a player! The unwanted individual could remove allies or kick every town from your nation.
+- **Colonists** may invite towns to the nation.
+- **Diplomats** are able to send, accept and deny nation ally requests.
 
 ## Nation commands
+
 :::note
 
-Only king and nation residents with appropriate ranks can run nation commands.
+Only the king of the nation can run all of these commands. Chancellors are not allowed to run `/n set king` and `/n delete`.
 
 :::
 
-| Command                            | Description                                   |
-| ---------------------------------- |:--------------------------------------------- |
-| /n [name]                          | Get information of specified nation           |
-| /n new [name]                      | Create a new nation                           |
-| /n leave                           | Makes your town leave nation                  |
-| /n withdraw [amount]               | Withdraw gold from nation bank                |
-| /n deposit [amount]                | Deposit gold from nation bank                 |
-| /n add [town]                      | Invite town to nation                         |
-| /n kick [town]                     | Kick a town from nation                       |
-| /n ally add/remove [nation]        | Add/remove nation ally                        |
-| /n rank add/remove [player] [rank] | Grant/revoke rank from nation resident        |
-| /n set king [player]               | King command to change the king of the nation |
-| /n set title [player] [title name] | set player's title (e.g.change King by Queen) |
-| /n set capital [town]              | Set nation capital                            |
-| /n set spawn                       | Set nation spawn at your location             |
+| Command                                                      | Description                                              |
+| ------------------------------------------------------------ | :------------------------------------------------------- |
+| /n [name]                                                    | Get information of specified nation                      |
+| /n new [name]                                                | Create a new nation                                      |
+| /n leave                                                     | Makes your town leave nation                             |
+| /n withdraw [amount]                                         | Withdraw gold from nation bank                           |
+| /n deposit [amount]                                          | Deposit gold from nation bank                            |
+| /n add [town]                                                | Invite town to nation                                    |
+| /n kick [town]                                               | Kick a town from nation                                  |
+| /n ally add/remove [nation]                                  | Add/remove nation ally                                   |
+| /n enemy add/remove [nation]                                 | Add/remove nation enemy. Removes or prevents an alliance |
+| /n rank add/remove <span>[player]</span> <span>[rank]</span> | Grant/revoke rank from nation resident                   |
+| /n toggle open                                               | Toggle public joining to your nation                     |
+| /n delete                                                    | Delete nation                                            |
+| /n set king [player]                                         | King command to change the king of the nation            |
+| /n set capital [town]                                        | Set nation capital                                       |
+| /n set spawn                                                 | Set nation spawn at your location                        |
+| /n set board [message]                                       | Set nation message of the day                            |
+| /n set taxes [amount]                                        | Set nation taxes per 24-hour cycle                       |
+| /n set title [title]                                         | Set titles for members of your nation                    |
+| /emcmap nationcolor [HEX colour]                             | Set nation colour on EMC map (**Premium Only**)          |
+| /emcmap nationoutline [HEX colour]                           | Set nation outline colour on EMC map (**Premium Only**)  |
